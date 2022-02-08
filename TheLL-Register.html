@@ -1,0 +1,191 @@
+<head>
+    <link href='style.css' rel="stylesheet">
+    <script src="js.js" defer></script>
+</head>
+
+<html>
+<!---------------------------------------------------------->    
+    <template id="Posts">
+        <div class="blogpost">
+            <div class="row">
+                <div class="col-1 postProPic">
+                    <picture>
+                        <div class="sppwrapper">
+                            <img src={{usersprofilepicture}} href="https://oscarroos.portfoliobox.net/" title={{username}}>
+                        </div>
+                    </picture>
+                    <p style="margin-top: 2px;">{{username}}</p>
+                </div>
+
+                <div class="col-9">
+                    <div class="PostContent">
+                        Here i will try and fetch the post PostContent
+                    </div>    
+                </div>
+
+                <div class="col-2">
+                    <li style="list-style-type: none;">
+                        <div class="Postdate">
+                            {{Dateplaceholder}}
+                        </div>
+                    </li>
+                    <template id="contentattached">   
+                        <li style="list-style-type: none;">
+                            <div class="attachcontent">
+
+                            </div>
+                        </li>
+                    </template> 
+                </div>
+            </div>
+        </div>
+    </template>
+<!---------------------------------------------------------->
+
+<body id="style" style="background-color: white;">
+    <div class="container">
+        <header>
+<!--- The first row. Includes the headers, icons and the Login Button.-->
+            <div class="row" style="margin-left: 8px; margin-right: 8px;">
+                <div class="col-4">
+                    <img src="imgs/doodle_icon_x-removebg-preview.png" id="FPicon" href="TheLL-Home.html">
+                </div>
+                <div class="col-4" >
+                    <div id="TheHub">
+                        <img src="imgs/TheHub.png" id="theHubPic" href="TheLL-About.html">
+                    </div>    
+                </div>    
+                <div class="col-4">
+                    <button class="loginbutton" id="loginbutton"><a href="TheLL-Login.html">Login</a></button>
+                </div>
+            </div>    
+        </header>
+    </div>
+
+<!--- The second row, just a stripe as part of the navbar.-->
+    <div class = "row" style="padding:0; margin:0;">
+        <div class="col-12" style="padding:0; margin:0;">
+            <header class="stripe"></header>
+        </div>
+    </div>
+
+<!--- The third row. Includes the whole navbar-->
+    <div class="row">
+        <div class = "navbar col-12">
+            <li>
+                <li class = "horizontal-navbar-item"><a href="TheLL-Home.html">Home</a></li>
+                <li class = "horizontal-navbar-item"><a href="TheLL-Login.html">Login</a></li>
+                <li class = "horizontal-navbar-item"><a class="active" href="TheLL-Register.html">Register</a></li>
+                <input type="text" placeholder="Search..">
+            </li>
+        </div>    
+    </div>
+
+<!--- The fourth row, just a stripe as part of the navbar.-->
+    <div class = "row" style="padding:0; margin:0;">
+        <div class="col-12" style="padding:0; margin:0;">
+            <header class="stripe"></header>
+        </div>
+    </div>
+
+
+<!---The ffifth row. Includes both sidebars and the main content of each page -->
+<!--- The left sidepanel-->
+    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+        <div class="col-2" style="margin-left:0; padding-left:0; margin-top:0; padding-top:0; min-height:100%; padding-bottom: 0;" id="panelcol">
+
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="#">Placeholder</a>
+                <a href="#">Placeholder</a>
+                <a href="#">Placeholder</a>
+                <a href="#">Placeholder</a>
+                <a> <label class="switch" >
+                        <input type="checkbox" id="darkmode" onclick="darkmode()">
+                        <span class="slider round"></span>
+                    </label>
+                </a>
+            </div>
+              
+<!--- The middle/the main content-->
+        </div>
+            <div class="col-8" style="padding-top: 2px; padding-bottom: 2px;" id="midcol">
+
+                <main >                     
+                    <div class="row">
+                        <div>
+                            <form action="" url="" style="width:10%; margin:auto;">
+                                <h1>Register</h1>
+                                <input type="text" placeholder="Name" id="Username" minlength="6"><br> <br>
+
+                                <input type="text" placeholder="Password" id="password" minlength="8"><br><br>
+
+                                <input type="text" placeholder="Repeat Password" id="password2" minlength="8"><br><br>
+
+                                <label class="Sendbutton" style="float:left;" id="Registerbutton" onclick=(Register())>
+                                    <input type="submit" name="attach" >
+                                    Register
+                                </label>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+<!--- The right navbar-->
+            <div class="col-2" style="margin-right:0; padding-right:0; margin-top:0; padding-top:0; min-height:100%; padding-bottom: 0;" >
+            
+
+                <div id="mySidepanel2" class="sidepanelr">
+                    <div class = "accountpicture" style="float:right; padding:20px; margin-right: 20px; overflow: hidden;">
+                        <img src="imgs/DSC00068.jpg" alt="https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/263323650_208829878069496_897703272158514116_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=OMfuvMz3QLcAX9feRyu&tn=0QQ003lLCBmMz2uH&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=MjcyMTk3OTc2NDE2ODg2NDg1OA%3D%3D.2-ccb7-4&oh=00_AT9XMtTjm3hmq_w-0pRraBQP2rD2l7eC75deGuHb6kPU1A&oe=62056412&_nc_sid=30a2ef" href="https://oscarroos.portfoliobox.net/">
+                    </div>
+                    <ul style="margin-left:30px">
+                        <a href="#">Account</a>
+                        <a href="#">My Connections</a>
+                        <a href="#">My Posts</a>
+                        <a href="#">Booksmarks</a>
+                        <a href="#">Settings</a>
+                    </ul>
+                </div>
+            </div>	
+    </div>
+
+
+<!--- The sixth and last row, the footer row-->
+    <div class = "row" style="padding:0; margin:0;">
+        <div class="col-12" style="padding:0; margin:0;">
+            <header class="stripe"></header>
+        </div>
+    </div>
+    <div class="row" style="margin: 0; padding: 0;">
+        <div class="col-12" style="margin: 0; padding: 0;">
+            <footer>
+                <div class="footer-content">
+                    <h3>Training is gud</h3>
+                    <p>This website is created to serve as a Training platform and for personal use.</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                     </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 <a href="">ChaBoy</a>  </p>
+                    <div class="footer-menu">
+                        <ul class="f-menu">
+                           <li><a href="TheLL-Home.html">Home</a></li>
+                           <li><a href="TheLL-About.html">About</a></li>
+                           <li><a href="https://oscarroos.portfoliobox.net/">Portfolio</a></li>
+                           <li><a href="TheLL-Blog.html">Blog</a></li>
+                        </ul>
+                       </div>
+                 </div>
+            </footer>
+        </div>
+    </div>    
+</body>
+</html>
